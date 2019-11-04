@@ -106,7 +106,7 @@ def create_couples(data_sorted, singles):
 
 def import_data(file):
     # important: only works if file is well structured!!!
-    data = pd.read_csv(file)
+    data = pd.read_csv(file, dtype=str)
 
     data = data.rename(columns = column_mapping)
     data = data.replace({"food": food_mapping})
