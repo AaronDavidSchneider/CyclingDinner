@@ -1,0 +1,41 @@
+Ihr lieben Kochenden des Cycling Dinners,
+
+super, dass ihr euch angemeldet habt! Wir freuen uns schon auf einen spannenden Abend mit euch!
+
+Hier sind die Kontaktdaten deines Kochpartners:
+{E_s},{H_s}
+Ihr kocht hier: {O_s}
+
+
+Vorspeise - 17:30
+Ort: {O_V}
+Namen auf dem Klingelschild: {N_V}
+Handynummer falls ihr zu spät kommen werdet o.ä.: {H_V}
+
+
+Hauptspeise - 19:00
+Ort: {O_H}
+Namen auf dem Klingelschild: {N_H}
+Handynummer falls ihr zu spät kommen werdet o.ä.: {H_H}
+
+
+Dessert - 20:30
+Ort: {O_N}
+Namen auf dem Klingelschild: {N_N}
+Handynummer falls ihr zu spät kommen werdet o.ä.: {H_N}
+
+
+(Lebens-) Wichtig
+Bitte beachtet bei der Vorbereitung eures Ganges folgende relevante Infos:
+{Notes_V}
+{Notes_H}
+{Notes_N}
+
+Um 22:00 wird es die Möglichkeit geben, den Abend in {Ort} gemeinsam ausklingen zu lassen.
+
+!!!Bitte beachtet eure Anfahrt zum jeweiligen Austragungsort und fahrt rechtzeitig los! :)
+
+Auch wenn wir versuchen die Fahrten zwischen den Gängen möglichst kurz zu machen, kann es im Einzelfall zu einer längeren Anreise kommen. Wir bitten daher um Verständnis.
+
+Liebe Grüße
+Alina, Fabian, Simon, Aaron

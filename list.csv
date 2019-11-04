@@ -1,0 +1,10 @@
+index,name,address,PLZ,food,transportation,notes
+0,Schneider,Rosenweg 10,69221,H,bicycling,
+1,Mustermann,Heidelberger Str. 7,68519,V,bicycling,
+2,Welt,Bahnhofsstraße 5,69221,N,bicycling,veggie
+3,Blumenthal,Blumenthalstraße 10,69120,H,bicycling,
+4,Muster,Ladenburger Str. 7,69120,V,bicycling,
+5,Boden,Werderstraße 5,69120,N,bicycling,veggie
+6,Dieter,Tübnerstraße 1,69121,H,bicycling,
+7,Fritz,Hans-Thoma-Str. 7,69121,V,bicycling,
+8,Garten,Wiesenweg 35,69121,N,bicycling,veggie
