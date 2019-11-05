@@ -2,6 +2,7 @@ Ihr lieben Kochenden des Cycling Dinners,
 
 super, dass ihr euch angemeldet habt! Wir freuen uns schon auf einen spannenden Abend mit euch!
 
+Euer Team bereitet {food} vor.
 
 Vorspeise - 17:30
 Ort: {O_V}
@@ -21,18 +22,19 @@ Namen auf dem Klingelschild: {N_N}
 Handynummer falls ihr zu spät kommen werdet o.ä.: {H_N}
 
 
+Get-together - 22:00
+Ort: Kaffeebar der Calvary Chapel
+Vangerowstraße 51A, 69115 Heidelberg
+
+
 (Lebens-) Wichtig
-Bitte beachtet bei der Vorbereitung eures Ganges folgende relevante Infos:
-{Notes_V}
-{Notes_H}
-{Notes_N}
+Bitte beachtet bei der Vorbereitung eures Ganges folgende relevante Infos deiner Gäste:
+{Notes_0}
+{Notes_1}
 
-Falls etwas dazwischen kommt, hier die Handynummern deiner Gäste:
-{G_H_V}
-{G_H_H}
-{G_H_N}
-
-Um 22:00 wird es die Möglichkeit geben, den Abend in ... gemeinsam ausklingen zu lassen.
+Falls ihr selbst zu spät kommt, hier die Handynummern deiner Gäste:
+{G_H_0}
+{G_H_1}
 
 !!!Bitte beachtet eure Anfahrt zum jeweiligen Austragungsort und fahrt rechtzeitig los! :)
 
@@ -40,3 +42,8 @@ Auch wenn wir versuchen die Fahrten zwischen den Gängen möglichst kurz zu mach
 
 Liebe Grüße
 Alina, Fabian, Simon, Aaron
+
+PS:
+#insta
+Wenn ihr eure Impressionen des Abends teilen wollt, dann verwendet auf Instagram gerne den Hashtag #CyclingDinnerHD2019
+Die Hochschulgruppen nutzen diese Fotos dann ggf. für ihre Instagramaccounts.

@@ -27,9 +27,10 @@ transp_mapping = {
     "Bahn":"transit"
 }
 
-food_mapping = {
+food_mapping
+ = {
     "Vorspeise":"V",
-    "Hauptspeise":"H",
+    "Hauptgang":"H",
     "Nachspeise":"N"
 }
 
@@ -56,48 +57,48 @@ def rearange_teams(data_sorted):
         diff = np.max(counts) - counts
     return data_sorted
 
-def combine_singles(data_sorted,singles,best_possible_rest):
-    """ Not working yet!!! """
-    counts = [len(x.index) for x in data_sorted]
-    diff = np.max(counts) - counts
-    while np.sum(diff) > best_possible_rest:
-        highest = np.argmin(counts)
-        lowest = np.argsort(diff)[0]
-        try:
-            temp = singles[singles.food==gd_inv[lowest]].sample(2,replace=False).copy()
-        except ValueError:
-            try:
-                temp = singles[singles.food==gd_inv[lowest]].sample(1,replace=False).copy()
-                temp.append(singles.sample(1,replace=False))
-            except ValueError:
-                temp = singles.sample(2,replace=False).copy()
-
-        singles.drop(temp.index)
-        temp.food=gd_inv[lowest]
-        data_sorted[lowest].append(temp)
-
-        counts = [len(x.index) for x in data_sorted]
-        diff = np.max(counts) - counts
-    return data_sorted
+# def combine_singles(data_sorted,singles,best_possible_rest):
+#     """ Not working yet!!! """
+#     counts = [len(x.index) for x in data_sorted]
+#     diff = np.max(counts) - counts
+#     while np.sum(diff) > best_possible_rest:
+#         highest = np.argmin(counts)
+#         lowest = np.argsort(diff)[0]
+#         try:
+#             temp = singles[singles.food==gd_inv[lowest]].sample(2,replace=False).copy()
+#         except ValueError:
+#             try:
+#                 temp = singles[singles.food==gd_inv[lowest]].sample(1,replace=False).copy()
+#                 temp.append(singles.sample(1,replace=False))
+#             except ValueError:
+#                 temp = singles.sample(2,replace=False).copy()
+#
+#         singles.drop(temp.index)
+#         temp.food=gd_inv[lowest]
+#         data_sorted[lowest].append(temp)
+#
+#         counts = [len(x.index) for x in data_sorted]
+#         diff = np.max(counts) - counts
+#     return data_sorted
 
 def create_couples(data_sorted, singles):
     # merge people
     counts = [len(x.index) for x in data_sorted]
 
-    if len(singles.index) % 2 != 0:
-        print("Problem: pairs couldnt be assigned, one person is dropped randomly:")
-        i = random.randint(0,len(singles.index)-1)
-        print(singles.iloc[i])
-        singles.drop(i)
+    # if len(singles.index) % 2 != 0:
+    #     print("Problem: pairs couldnt be assigned, one person is dropped randomly:")
+    #     i = random.randint(0,len(singles.index)-1)
+    #     print(singles.iloc[i])
+    #     singles.drop(i)
 
     diff = np.max(counts) - counts
     best_possible_rest = (np.sum(counts) + len(singles.index)/2) % 3
     print(f"the best possible arrangement has rest: {best_possible_rest}")
 
-    if np.sum(diff)>(len(singles.index)/2):
-        print("Teams need to be rearanged!")
-        data_sorted = rearange_teams(data_sorted)
-
+    # if np.sum(diff)>(len(singles.index)/2):
+    #     print("Teams need to be rearanged!")
+    #     data_sorted = rearange_teams(data_sorted)
+    data_sorted = rearange_teams(data_sorted)
     #if len(singles.index)>=2:
     #    data_sorted = combine_singles(data_sorted,singles,best_possible_rest)
 
@@ -122,6 +123,11 @@ def import_data(file):
 
     data_sorted = [V_pd,H_pd,N_pd]
 
+    # DEBUG:
+    # print(len(V_pd.index))
+    # print(len(H_pd.index))
+    # print(len(N_pd.index))
+
     data_sorted = create_couples(data_sorted, data[data.single])
 
     counts = [len(x.index) for x in data_sorted]
@@ -134,6 +140,7 @@ def import_data(file):
     print(V_pd)
     print(H_pd)
     print(N_pd)
+    # quit() # DEBUGGING
 
     if np.sum(diff)!=0:
         print("ERROR: no combination possible!!!")
