@@ -2,6 +2,7 @@ from source.couple import couple
 from source.group import group
 import source.config as c
 import numpy as np
+from slugify import slugify
 
 # see https://stackoverflow.com/questions/5775352/python-return-2-ints-for-index-in-2d-lists-given-item
 def index_2d(myList, v):
@@ -78,7 +79,7 @@ class combination:
                 form_dict["Notes_"+c] = str(couple.guests[c].note).replace("nan","N/A")
                 form_dict["G_H_"+c] = couple.guests[c].phone
 
-            out = open("mails/mail_{}.txt".format(couple.name),"w+")
+            out = open("mails/{}.txt".format(slugify(couple.mail)),"w+")
             out.write(mail.format(**form_dict))
             out.close()
 

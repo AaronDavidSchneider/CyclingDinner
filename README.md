@@ -35,6 +35,10 @@ Maps API installieren:
 
 Google Maps API key auf <https://cloud.google.com/maps-platform/> beantragen.
 
+slugify installieren:
+
+    pip install python-slugify
+
 ### Konfiguration:
 
 Im Ordner `source`die Datei `config.py` anpassen.

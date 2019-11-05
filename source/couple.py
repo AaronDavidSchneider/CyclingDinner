@@ -2,6 +2,7 @@ import numpy as np
 import source.config as c
 from geopy.geocoders import GoogleV3
 import wget
+from slugify import slugify
 geolocator = GoogleV3(api_key=c.API_KEY)
 
 gang_dict = {"V": 0, "H": 1, "N": 2}
@@ -19,6 +20,8 @@ class couple:
         self.note = data["notes"]
         self.pre = None
         self.location = geolocator.geocode(self.address)
+        if self.location is None:
+            print(self.address)
 
     def print_info(self, gang):
         result = ""
@@ -51,6 +54,7 @@ class couple:
         result = self.name+" hat gesehen: "
         for i in range(len(self.teams_met)):
             result += teams_met_string[i]
+        result += " ({} Teams)".format(len(self.teams_met))
         print(result)
 
 
@@ -61,4 +65,4 @@ class couple:
         address = [f"{lat[i]},{long[i]}" for i in range(3)]
 
         url = f"https://maps.googleapis.com/maps/api/staticmap?zoom=12&scale=2&size=600x600&maptype=roadmap&key={c.API_KEY}&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:V%7C{address[0]}&markers=size:mid%7Ccolor:0xff0000%7Clabel:H%7C{address[1]}&markers=size:mid%7Ccolor:0xff0000%7Clabel:N%7C{address[2]}"
-        wget.download(url, "maps/{}.png".format(self.name))
+        wget.download(url, "maps/{}.png".format(slugify(self.mail)))
