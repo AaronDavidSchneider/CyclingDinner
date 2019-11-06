@@ -27,8 +27,7 @@ transp_mapping = {
     "Bahn":"transit"
 }
 
-food_mapping
- = {
+food_mapping = {
     "Vorspeise":"V",
     "Hauptgang":"H",
     "Nachspeise":"N"

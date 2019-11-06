@@ -2,7 +2,7 @@ Ihr lieben Kochenden des Cycling Dinners,
 
 super, dass ihr euch angemeldet habt! Wir freuen uns schon auf einen spannenden Abend mit euch!
 
-Euer Team bereitet {food} vor.
+Euer Team ist Verantwortlich für: {food}
 
 Vorspeise - 17:30
 Ort: {O_V}
@@ -39,6 +39,7 @@ Falls ihr selbst zu spät kommt, hier die Handynummern deiner Gäste:
 !!!Bitte beachtet eure Anfahrt zum jeweiligen Austragungsort und fahrt rechtzeitig los! :)
 
 Auch wenn wir versuchen die Fahrten zwischen den Gängen möglichst kurz zu machen, kann es im Einzelfall zu einer längeren Anreise kommen. Wir bitten daher um Verständnis.
+Wir berücksichtigen deinen Gangwunsch. Falls du einen anderen Gang vorbereiten musst als gewünscht, liegt das daran, dass zu viele Leute diesen Gang kochen wollten.
 
 Liebe Grüße
 Alina, Fabian, Simon, Aaron
@@ -47,3 +48,6 @@ PS:
 #insta
 Wenn ihr eure Impressionen des Abends teilen wollt, dann verwendet auf Instagram gerne den Hashtag #CyclingDinnerHD2019
 Die Hochschulgruppen nutzen diese Fotos dann ggf. für ihre Instagramaccounts.
+
+PPS:
+Keine Gewähr für die Richtigkeit der obigen Daten. Der Code für die Verteilung befindet sich noch in der Beta Phase. Wir bitten um Verständnis.

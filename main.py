@@ -49,6 +49,7 @@ def main(file):
             #comb.print_combination()
             total_comb.append(comb)
             loss_comb_geodesic.append(comb.get_loss())
+        print("finished iteration: ", i)
 
     if c.max_api_calls != 0:
         max_gmaps = int(c.max_api_calls / (N_couples * c.N_courses))
@@ -62,8 +63,8 @@ def main(file):
             ]
             winner_comb = winner_comb_geodesic[np.argmin(loss_comb)]
         else:
+            loss_comb = loss_comb_geodesic
             winner_comb = total_comb[np.argmin(loss_comb)]
-            loss_comb = loss_geodesic
             print("using geodesic loss")
     else:
         loss_comb = loss_comb_geodesic
